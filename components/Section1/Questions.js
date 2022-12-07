@@ -1,4 +1,6 @@
-import React from "react";
+//prettier-ignore
+"use client"
+import { useState } from "react";
 
 const Questions = () => {
   const question2 = [
@@ -20,6 +22,15 @@ const Questions = () => {
     { id: "3", title: "Clicking on the link provided" },
     { id: "4", title: "By checking the date the email was sent" },
   ];
+  const [selq2, Setselq2] = useState(1);
+  const [q2response, SetQ2response] = useState(null);
+  const checkQ2Answer = () => {
+    if (selq2 === 1 || selq2 == 3) {
+      SetQ2response("Correct answer.");
+    } else {
+      SetQ2response("Incorrect answer. Try again!");
+    }
+  };
   return (
     <div className="bg-gray-50 py-12 min-h-screen flex items-center flex-col justify-center">
       <div className="max-w-7xl flex items-center justify-center w-full flex-col ">
@@ -95,6 +106,8 @@ const Questions = () => {
                   id={q2.id}
                   name="notification-method"
                   type="radio"
+                  value={q2.id}
+                  onClick={() => Setselq2(q2.id)}
                   defaultChecked={q2.id === "1"}
                   className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                 />
@@ -107,9 +120,23 @@ const Questions = () => {
               </div>
             ))}
           </div>
-          <button className="flex mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700">
+          <button
+            onClick={checkQ2Answer}
+            className="flex mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700"
+          >
             Submit
           </button>
+          {q2response == "Correct answer." ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-green-600">
+              {q2response}
+            </h1>
+          ) : q2response == "Incorrect answer. Try again!" ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-red-600">
+              {q2response}
+            </h1>
+          ) : (
+            <></>
+          )}
         </fieldset>
         <h1 className="text-2xl mt-20 font-bold  tracking-tight text-indigo-600 ">
           Question 3

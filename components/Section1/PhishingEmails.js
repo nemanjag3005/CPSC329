@@ -3,7 +3,7 @@ import React from "react";
 const PhishingEmails = () => {
   return (
     <div className="bg-gray-50 min-h-screen flex items-center flex-col justify-center">
-      <div className="max-w-7xl flex items-center justify-center w-full flex-col space-y-10">
+      <div className="max-w-7xl flex items-center py-12 justify-center w-full flex-col space-y-10">
         <div className="flex items-center justify-between w-full">
           <a href="/popups" className="text-indigo-600">
             <svg
@@ -52,9 +52,33 @@ const PhishingEmails = () => {
           Phishing Attacks
         </h1>
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          Be suspicious of unsolicited emails or messages. If you receive an
+          email or message from an unknown sender, be wary of clicking on any
+          links or attachments.
+        </h1>
+        <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
+          Don't give out personal information. If someone asks you for your
+          personal information, such as your Social Security number, bank
+          account details, or credit card information, be cautious. Scammers
+          often try to trick people into revealing sensitive information by
+          pretending to be a legitimate organization.
+        </h1>
+        <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
+          Look for telltale signs of a phishing attack. Some common signs of a
+          phishing attack include misspelled words, poor grammar, and urgent
+          language that tries to pressure you into taking action.
+        </h1>
+        <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
+          Check the sender's email address. Scammers often create fake email
+          addresses that look similar to the ones used by legitimate
+          organizations. If you're unsure about the sender's email address,
+          contact the organization directly to verify the email's authenticity.
+        </h1>
+        <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
+          Be cautious when clicking on links. If you receive an email or message
+          that contains a link, hover your cursor over the link to see the
+          website's address. If the website's address looks suspicious or
+          doesn't match the organization's website, don't click on it.
         </h1>
         <a
           href="/section1-questions"

@@ -1,7 +1,14 @@
+//prettier-ignore
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const Example1 = () => {
+  const [popupsopen, setPopupsopen] = useState(true);
+  const closePopUp = () => {
+    window.alert("Never click on pop-ups!");
+    setPopupsopen(false);
+  };
   return (
     <div className="bg-gray-50 min-h-screen flex items-center flex-col justify-center">
       <div className="max-w-7xl flex items-center justify-center w-full flex-col space-y-10">
@@ -53,9 +60,18 @@ const Example1 = () => {
           Pop Ups
         </h1>
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          Website popups can be a cybersecurity threat for several reasons.
+          First, some popups are designed to trick users into clicking on them,
+          which can lead to the download of malware or other harmful software.
+          This can compromise the security of the user's device and potentially
+          lead to the theft of sensitive information. Additionally, some pop ups
+          are designed to look like legitimate notifications from the user's
+          operating system or web browser, which can make them difficult to
+          distinguish from genuine alerts. This can cause users to inadvertently
+          grant access to their device or personal information to attackers.
+          Finally, popups can be used to launch phishing attacks, where users
+          are tricked into entering sensitive information into a fake website in
+          order to steal their login credentials or other sensitive data.
         </h1>
         <a
           href="/phishing"
@@ -78,7 +94,12 @@ const Example1 = () => {
           </svg>
         </a>
       </div>
-      {/* <div className="bg-white shadow-xl border-gray-600 border absolute top-16 left-12">
+      <div
+        onClick={closePopUp}
+        className={`bg-white shadow-xl border-gray-600 border top-16 left-12 ${
+          popupsopen ? "absolute" : "hidden"
+        }`}
+      >
         <div className="bg-gray-600 w-full flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +129,12 @@ const Example1 = () => {
           </button>
         </div>
       </div>
-      <div className="bg-white shadow-xl rounded-xl border border-red-600 absolute top-20 right-24">
+      <div
+        onClick={closePopUp}
+        className={`bg-white shadow-xl rounded-xl border border-red-600 top-20 right-24 ${
+          popupsopen ? "absolute" : "hidden"
+        }`}
+      >
         <div className="bg-red-600 w-full rounded-t-xl flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +161,12 @@ const Example1 = () => {
           </button>
         </div>
       </div>
-      <div className="bg-white shadow-xl border-blue-600 border absolute top-88 left-96">
+      <div
+        onClick={closePopUp}
+        className={`bg-white shadow-xl border-blue-600 border absolute top-88 left-96 ${
+          popupsopen ? "absolute" : "hidden"
+        }`}
+      >
         <div className="bg-blue-600 w-full flex">
           <h1 className="text-white ml-auto">Congratulations!</h1>
           <svg
@@ -165,7 +196,12 @@ const Example1 = () => {
           </button>
         </div>
       </div>
-      <div className="bg-white shadow-xl border-red-800 border absolute top-64 right-96">
+      <div
+        onClick={closePopUp}
+        className={`bg-white shadow-xl border-red-800 border absolute top-64 right-96 ${
+          popupsopen ? "absolute" : "hidden"
+        }`}
+      >
         <div className="bg-red-800 w-full flex">
           <h1 className="text-white ml-auto">Virus!</h1>
           <svg
@@ -183,7 +219,10 @@ const Example1 = () => {
             />
           </svg>
         </div>
-        <div className="flex flex-col items-center justify-center pb-6 pt-3 px-16">
+        <div
+          onClick={closePopUp}
+          className="flex flex-col items-center justify-center pb-6 pt-3 px-16"
+        >
           <h1 className="text-2xl font-semibold text-red-600 mb-4 flex items-center">
             INFECTION!
             <svg
@@ -211,7 +250,12 @@ const Example1 = () => {
           </button>
         </div>
       </div>
-      <div className="bg-white shadow-xl rounded-xl border border-red-400 absolute top-36 right-100">
+      <div
+        onClick={closePopUp}
+        className={`bg-white shadow-xl rounded-xl border border-red-400 absolute top-36 right-100 ${
+          popupsopen ? "absolute" : "hidden"
+        }`}
+      >
         <div className="bg-red-400 w-full rounded-t-xl flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +285,7 @@ const Example1 = () => {
             Download more RAM
           </button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
