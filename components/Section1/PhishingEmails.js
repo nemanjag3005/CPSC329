@@ -57,7 +57,7 @@ const PhishingEmails = () => {
           links or attachments.
         </h1>
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
-          Don't give out personal information. If someone asks you for your
+          Don&apos;t give out personal information. If someone asks you for your
           personal information, such as your Social Security number, bank
           account details, or credit card information, be cautious. Scammers
           often try to trick people into revealing sensitive information by
@@ -69,16 +69,18 @@ const PhishingEmails = () => {
           language that tries to pressure you into taking action.
         </h1>
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
-          Check the sender's email address. Scammers often create fake email
-          addresses that look similar to the ones used by legitimate
-          organizations. If you're unsure about the sender's email address,
-          contact the organization directly to verify the email's authenticity.
+          Check the sender&apos;s email address. Scammers often create fake
+          email addresses that look similar to the ones used by legitimate
+          organizations. If you&apos;re unsure about the sender&apos;s email
+          address, contact the organization directly to verify the email&apos;s
+          authenticity.
         </h1>
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
           Be cautious when clicking on links. If you receive an email or message
           that contains a link, hover your cursor over the link to see the
-          website's address. If the website's address looks suspicious or
-          doesn't match the organization's website, don't click on it.
+          website&apos;s address. If the website&apos;s address looks suspicious
+          or doesn&apos;t match the organization&apos;s website, don&apos;t
+          click on it.
         </h1>
         <a
           href="/section1-questions"

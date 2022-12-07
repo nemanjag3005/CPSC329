@@ -63,15 +63,16 @@ const Example1 = () => {
           Website popups can be a cybersecurity threat for several reasons.
           First, some popups are designed to trick users into clicking on them,
           which can lead to the download of malware or other harmful software.
-          This can compromise the security of the user's device and potentially
-          lead to the theft of sensitive information. Additionally, some pop ups
-          are designed to look like legitimate notifications from the user's
-          operating system or web browser, which can make them difficult to
-          distinguish from genuine alerts. This can cause users to inadvertently
-          grant access to their device or personal information to attackers.
-          Finally, popups can be used to launch phishing attacks, where users
-          are tricked into entering sensitive information into a fake website in
-          order to steal their login credentials or other sensitive data.
+          This can compromise the security of the user&apos;s device and
+          potentially lead to the theft of sensitive information. Additionally,
+          some pop ups are designed to look like legitimate notifications from
+          the user&apos;s operating system or web browser, which can make them
+          difficult to distinguish from genuine alerts. This can cause users to
+          inadvertently grant access to their device or personal information to
+          attackers. Finally, popups can be used to launch phishing attacks,
+          where users are tricked into entering sensitive information into a
+          fake website in order to steal their login credentials or other
+          sensitive data.
         </h1>
         <a
           href="/phishing"
