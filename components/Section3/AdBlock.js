@@ -3,7 +3,7 @@ import React from "react";
 const AdBlock = () => {
   return (
     <div className="bg-gray-50 min-h-screen flex items-center flex-col justify-center">
-      <div className="max-w-7xl flex items-center justify-center w-full flex-col space-y-10">
+      <div className="max-w-7xl py-12 flex items-center justify-center w-full flex-col space-y-10">
         <div className="flex items-center justify-between w-full">
           <a href="/password-strength" className="text-indigo-600">
             <svg
@@ -53,9 +53,31 @@ const AdBlock = () => {
         </h1>
 
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          There are a few different resources we can use to maintain good
+          cybersecurity practices. One of these resources is Ad blocker
+          softwares. Ad blockers are software programs that prevent
+          advertisements from being displayed on websites. These programs are
+          typically used by internet users who want to avoid seeing ads while
+          browsing the web. Ad blockers work by blocking or hiding elements on a
+          web page that are typically used to display ads, such as banner ads,
+          pop-up ads, or video ads, some of which may be malicious. This can
+          make web pages load faster and improve the user experience by reducing
+          the amount of clutter and distractions on the page.
+        </h1>
+        <h1 className="text-4xl mt-12 font-bold tracking-tight text-gray-900 ">
+          Antivirus Software
+        </h1>
+        <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
+          Antivirus software is another useful resource to maintain good
+          cybersecurity practices. Antivirus software is a program or set of
+          programs that are designed to prevent, detect, and remove malware
+          infections on individual computers, networks, or other devices.
+          Antivirus software typically works by scanning a computer or device
+          for known types of malware, such as viruses, worms, and ransomware,
+          and then removing any threats that are found. It can also monitor a
+          computer or device for suspicious activity that may indicate the
+          presence of malware, and block or remove any threats that are
+          detected.
         </h1>
 
         <a

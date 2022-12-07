@@ -1,6 +1,11 @@
-import React from "react";
+//prettier-ignore
+"use client"
+import { useState } from "react";
+import PasswordStrengthBar from "react-password-strength-bar";
 
 const Passwords = () => {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <div className="bg-gray-50 min-h-screen flex items-center flex-col justify-center">
       <div className="max-w-7xl flex items-center justify-center w-full flex-col space-y-10">
@@ -53,27 +58,39 @@ const Passwords = () => {
         </h1>
 
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          Here we have a simple password tester, it will evaluate a password you
+          input to see if it is strong or not. Play around to see what makes a
+          password strong.
         </h1>
         <div>
           <label
-            htmlFor="email"
+            htmlFor="password"
             className="block text-md font-medium text-gray-900"
           >
             Strength meter
           </label>
           <div className="mt-1">
             <input
-              type="email"
-              name="email"
-              id="email"
+              type="password"
+              name="password"
+              id="password"
+              value={inputValue}
+              onChange={(e) => {
+                setInputValue(e.target.value);
+              }}
               className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="Your password"
             />
+            <PasswordStrengthBar
+              password={inputValue}
+              minLength={5}
+              onChangeScore={(score, feedback) => {
+                console.log(score, feedback);
+              }}
+            />
           </div>
         </div>
+
         <a
           href="/password-leaks"
           className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"

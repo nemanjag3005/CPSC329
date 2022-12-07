@@ -1,10 +1,10 @@
 import React from "react";
-import Questions from "../../components/Section2/Questions";
+import Questions2 from "../../components/Section2/Questions2";
 
 const Section2Questions = () => {
   return (
     <>
-      <Questions />
+      <Questions2 />
     </>
   );
 };

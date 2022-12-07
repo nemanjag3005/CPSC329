@@ -53,9 +53,13 @@ const PasswordLeaks = () => {
         </h1>
 
         <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          A password leak is when a large number of user passwords are made
+          publicly available. This can happen through data breaches or when
+          users use the same password for multiple accounts. Password leaks can
+          be dangerous and users should change their password immediately if it
+          is leaked. It is also a good idea to use a different password for each
+          account and a password manager to help generate and manage unique
+          passwords.
         </h1>
 
         <a

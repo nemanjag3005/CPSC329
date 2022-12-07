@@ -1,6 +1,8 @@
-import React from "react";
+//prettier-ignore
+"use client"
+import { useState } from "react";
 
-const Questions = () => {
+const Questions2 = () => {
   const question1 = [
     {
       id: "1",
@@ -26,21 +28,57 @@ const Questions = () => {
   const question3 = [
     {
       id: "1",
-      title: "The email address of the sender",
+      title: "Never",
     },
-    { id: "2", title: "4" },
-    { id: "3", title: "329" },
-    { id: "4", title: "100" },
+    { id: "2", title: "Once a Month" },
+    { id: "3", title: "Once every 3 - 6 months" },
+    { id: "4", title: "Once every 1 - 2 years" },
   ];
   const question4 = [
     {
       id: "1",
       title: "Birthdays",
     },
-    { id: "2", title: "4" },
-    { id: "3", title: "329" },
-    { id: "4", title: "100" },
+    { id: "2", title: "Ascending/descending numbers" },
+    { id: "3", title: "Spelling some variation of “password”" },
+    { id: "4", title: "A combination of letters, numbers, and symbols." },
   ];
+  const [selq2, Setselq2] = useState(1);
+  const [selq1, Setselq1] = useState(1);
+  const [selq3, Setselq3] = useState(1);
+  const [selq4, Setselq4] = useState(1);
+  const [q2response, SetQ2response] = useState(null);
+  const [q1response, SetQ1response] = useState(null);
+  const [q3response, SetQ3response] = useState(null);
+  const [q4response, SetQ4response] = useState(null);
+  const checkQ2Answer = () => {
+    if (selq2 == 2) {
+      SetQ2response("Correct answer.");
+    } else {
+      SetQ2response("Incorrect answer. Try again!");
+    }
+  };
+  const checkQ1Answer = () => {
+    if (selq1 == 4) {
+      SetQ1response("Correct answer.");
+    } else {
+      SetQ1response("Incorrect answer. Try again!");
+    }
+  };
+  const checkQ3Answer = () => {
+    if (selq3 == 3) {
+      SetQ3response("Correct answer.");
+    } else {
+      SetQ3response("Incorrect answer. Try again!");
+    }
+  };
+  const checkQ4Answer = () => {
+    if (selq4 == 1 || selq4 == 3 || selq4 == 2) {
+      SetQ4response("Correct answer.");
+    } else {
+      SetQ4response("Incorrect answer. Try again!");
+    }
+  };
   return (
     <div className="bg-gray-50 py-12 min-h-screen flex items-center flex-col justify-center">
       <div className="max-w-7xl flex items-center justify-center w-full flex-col ">
@@ -111,7 +149,9 @@ const Questions = () => {
                   id={q1.id}
                   name="notification-method"
                   type="radio"
+                  value={q1.id}
                   defaultChecked={q1.id === "1"}
+                  onClick={() => Setselq1(q1.id)}
                   className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                 />
                 <label
@@ -123,9 +163,23 @@ const Questions = () => {
               </div>
             ))}
           </div>
-          <button className="flex mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700">
+          <button
+            onClick={checkQ1Answer}
+            className="flex mb-2 mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700"
+          >
             Submit
           </button>
+          {q1response == "Correct answer." ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-green-600">
+              {q1response}
+            </h1>
+          ) : q1response == "Incorrect answer. Try again!" ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-red-600">
+              {q1response}
+            </h1>
+          ) : (
+            <></>
+          )}
         </fieldset>
         <h1 className="text-2xl mt-20 font-bold  tracking-tight text-indigo-600 ">
           Question 2
@@ -133,8 +187,8 @@ const Questions = () => {
         <h1 className="text-xl mt-2 mb-2 font-bold tracking-tight text-gray-900 ">
           How does having a strong password protect you online?
         </h1>
-        <fieldset className="mt-4 mb-16">
-          <legend className="sr-only">Question 2</legend>
+        <fieldset className="mt-4">
+          <legend className="sr-only">Notification method</legend>
           <div className="space-y-4">
             {question2.map((q2) => (
               <div key={q2.id} className="flex items-center">
@@ -142,6 +196,8 @@ const Questions = () => {
                   id={q2.id}
                   name="notification-method"
                   type="radio"
+                  value={q2.id}
+                  onClick={() => Setselq2(q2.id)}
                   defaultChecked={q2.id === "1"}
                   className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                 />
@@ -154,15 +210,29 @@ const Questions = () => {
               </div>
             ))}
           </div>
-          <button className="flex mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700">
+          <button
+            onClick={checkQ2Answer}
+            className="flex mb-2 mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700"
+          >
             Submit
           </button>
+          {q2response == "Correct answer." ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-green-600">
+              {q2response}
+            </h1>
+          ) : q2response == "Incorrect answer. Try again!" ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-red-600">
+              {q2response}
+            </h1>
+          ) : (
+            <></>
+          )}
         </fieldset>
         <h1 className="text-2xl mt-20 font-bold  tracking-tight text-indigo-600 ">
           Question 3
         </h1>
         <h1 className="text-xl mt-2 mb-2 font-bold tracking-tight text-gray-900 ">
-          How many leaks have occurred within the last 5 years?
+          How often should you change your passwords?
         </h1>
         <fieldset className="mt-4 mb-16">
           <legend className="sr-only">Question 3</legend>
@@ -173,6 +243,8 @@ const Questions = () => {
                   id={q3.id}
                   name="notification-method"
                   type="radio"
+                  value={q3.id}
+                  onClick={() => Setselq3(q3.id)}
                   defaultChecked={q3.id === "1"}
                   className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                 />
@@ -185,9 +257,23 @@ const Questions = () => {
               </div>
             ))}
           </div>
-          <button className="flex mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700">
+          <button
+            onClick={checkQ3Answer}
+            className="flex mb-2 mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700"
+          >
             Submit
           </button>
+          {q3response == "Correct answer." ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-green-600">
+              {q3response}
+            </h1>
+          ) : q3response == "Incorrect answer. Try again!" ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-red-600">
+              {q3response}
+            </h1>
+          ) : (
+            <></>
+          )}
         </fieldset>
         <h1 className="text-2xl mt-20 font-bold  tracking-tight text-indigo-600 ">
           Question 4
@@ -205,7 +291,9 @@ const Questions = () => {
                   id={q4.id}
                   name="notification-method"
                   type="radio"
+                  value={q4.id}
                   defaultChecked={q4.id === "1"}
+                  onClick={() => Setselq4(q4.id)}
                   className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
                 />
                 <label
@@ -217,9 +305,24 @@ const Questions = () => {
               </div>
             ))}
           </div>
-          <button className="flex mx-auto mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700">
+
+          <button
+            onClick={checkQ4Answer}
+            className="flex mx-auto mt-6 mb-2 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-3 py-1 text-base font-medium text-white hover:bg-indigo-700"
+          >
             Submit
           </button>
+          {q4response == "Correct answer." ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-green-600">
+              {q4response}
+            </h1>
+          ) : q4response == "Incorrect answer. Try again!" ? (
+            <h1 className="ml-3 block text-text-lg font-medium text-red-600">
+              {q4response}
+            </h1>
+          ) : (
+            <></>
+          )}
         </fieldset>
         <a
           href="/adblock"
@@ -246,4 +349,4 @@ const Questions = () => {
   );
 };
 
-export default Questions;
+export default Questions2;
