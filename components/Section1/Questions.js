@@ -36,11 +36,11 @@ const Questions = () => {
   const question3 = [
     {
       id: "1",
-      title: "The email address of the sender",
+      title: "The email asks for cash transfers or gift cards",
     },
-    { id: "2", title: "The content of in the email" },
-    { id: "3", title: "Clicking on the link provided" },
-    { id: "4", title: "By checking the date the email was sent" },
+    { id: "2", title: "The email is sent during the day" },
+    { id: "3", title: "The email is from an unknown individual" },
+    { id: "4", title: "The emails are sent during the weekday" },
   ];
   const [selq2, Setselq2] = useState(1);
   const [selq1, Setselq1] = useState(1);
@@ -220,7 +220,7 @@ const Questions = () => {
           Question 3
         </h1>
         <h1 className="text-xl mt-2 mb-2 font-bold tracking-tight text-gray-900 ">
-          How can we safely identify this as a phishing email??
+          What are some common traits of phishing emails?
         </h1>
         <fieldset className="mt-4 mb-16">
           <legend className="sr-only">Question 3</legend>
