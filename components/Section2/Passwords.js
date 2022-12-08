@@ -90,6 +90,13 @@ const Passwords = () => {
             />
           </div>
         </div>
+        <h1 className="text-2xl mt-12 font-bold tracking-tight text-gray-900 ">
+          Having a strong password is important for internet security because it
+          decreases the chance that somebody online will be able to access you
+          personal information and online accounts. By using a strong password
+          and following good password hygiene, you can help protect yourself
+          from cyber attacks and keep your personal information safe.
+        </h1>
 
         <a
           href="/password-leaks"
