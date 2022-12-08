@@ -1,5 +1,4 @@
 import React from "react";
-
 const HomePage = () => {
   return (
     <div className="bg-gray-50 min-h-screen flex items-center flex-col justify-center">
